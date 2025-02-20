@@ -4,67 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #4A90E2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .login-container {
-            background: white;
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            width: 500px; /* Lebarkan container */
-        }
-        .login-container img {
-            width: 180px; /* Perbesar logo */
-            margin-bottom: 20px;
-        }
-        .form-control {
-            border-radius: 8px;
-            font-size: 16px;
-            padding: 12px;
-        }
-        .btn-login {
-            background-color: #4A90E2;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 12px;
-            font-size: 16px;
-            width: 100%;
-        }
-        .btn-login:hover {
-            background-color: #357ABD;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="flex justify-center items-center min-h-screen bg-blue-500">
 
-<div class="login-container">
-    <h3 class="mb-3">ADMIN LOGIN</h3>
+<div class="bg-white p-10 rounded-lg shadow-lg text-center w-full max-w-md">
+    <h3 class="text-2xl font-semibold mb-4">ADMIN LOGIN</h3>
     
     <!-- Logo -->
-    <img src="/img/logo.png" alt="Logo">
+    <img src="/img/logo.png" alt="Logo" class="w-44 mx-auto mb-5">
     
     <!-- Form -->
     <form action="{{ route('login') }}" method="POST">
         @csrf
-        <div class="mb-3">
-            <input type="email" name="email" class="form-control" placeholder="Email" required>
+        <div class="mb-4">
+            <input type="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Email" required>
         </div>
-        <div class="mb-3">
-            <input type="password" name="password" class="form-control" placeholder="Password" required>
+        <div class="mb-4">
+            <input type="password" name="password" class="w-full p-3 border border-gray-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Password" required>
         </div>
-        <button type="submit" class="btn-login">LOGIN</button>
+        <button type="submit" 
+            class="w-full bg-blue-500 text-white font-semibold py-3 rounded-lg transition 
+                   hover:bg-blue-600 active:bg-white active:text-blue-500">
+            LOGIN
+        </button>
     </form>
 
-    <p class="mt-3"><a href="#">Forgot password?</a></p>
+    <p class="mt-4 text-sm"><a href="#" class="text-blue-500 hover:underline">Forgot password?</a></p>
 </div>
 
 </body>
