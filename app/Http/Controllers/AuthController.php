@@ -30,7 +30,7 @@ class AuthController extends Controller
      // Menampilkan dashboard
      public function dashboard()
      {
-         return view('layouts.app'); // Buat file dashboard.blade.php di resources/views
+         return view('dashboard'); // Buat file dashboard.blade.php di resources/views
      }
  
      // Logout
