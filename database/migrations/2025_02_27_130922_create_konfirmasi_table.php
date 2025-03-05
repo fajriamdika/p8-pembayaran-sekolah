@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('jurusan_siswa', 30); // Jurusan siswa
             $table->integer('kelas_siswa'); // Kelas siswa
             $table->string('nama_siswa', 50); // Nama siswa
-            $table->timestamps(); // created_at & updated_at
+            $table->timestamps(); 
         });
     }
 
