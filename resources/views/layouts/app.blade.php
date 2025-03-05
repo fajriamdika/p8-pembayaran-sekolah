@@ -107,13 +107,13 @@
 <nav class="navbar">
     <div class="left">
         <button id="toggleSidebar">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-bars" style="color: black"></i>
         </button>
         <span>DATA PEMBAYARAN SEKOLAH</span>
     </div>
     <div class="right">
         <span>ADMINISTRATOR</span>
-        <i class="fas fa-user"></i>
+        <i class="fas fa-user" style="color: black"></i>
     </div>
 </nav>
 

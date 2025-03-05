@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @if (session('success'))
+    <script>
+        alert("{{ session('success') }}");
+    </script>
+    @endif
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
@@ -30,7 +35,7 @@
         </button>
     </form>
 
-    <p class="mt-4 text-sm"><a href="#" class="text-blue-500 hover:underline">Forgot password?</a></p>
+    <p class="mt-4 text-sm"><a href="{{ route('forgotPasswordAdminForm') }}"class="text-blue-500 hover:underline">Forgot password?</a></p>
 </div>
 
 </body>
